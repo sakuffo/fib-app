@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 export default () => {
   return (
     <div>
-      <p>This is some other page.</p>
+      Im some other page!
       <Link to="/">Go back home</Link>
     </div>
   );
-}
+};

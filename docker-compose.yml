@@ -10,7 +10,7 @@ services:
       context: ./nginx
       dockerfile: Dockerfile.dev
     ports:
-      - "8080:80"
+      - "3050:80"
   api:
     build:
       dockerfile: Dockerfile.dev
@@ -42,7 +42,7 @@ services:
       # - PGPASSWORD=postgres_password
       # - PGPORT=5432
     depends_on:
-      - server
+      - api
   client:
     stdin_open: true
     build:
