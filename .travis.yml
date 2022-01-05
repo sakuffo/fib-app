@@ -16,7 +16,6 @@ after_success:
   - docker build -t sakuffo/fib-worker ./worker
   # Log in to docker cli
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-
   # Take those images and push them to docker hub
   - docker push sakuffo/fib-client
   - docker push sakuffo/fib-nginx
