@@ -9,6 +9,19 @@ before_install:
 script:
   - docker run -e CI=true sakuffo/react-test npm test
 
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-1"
+  app: "docker"
+  env: "Docker-env"
+  bucket_name: "elasticbeanstalk-us-east-1-981894193627"
+  bucket_path: "docker"
+  on:
+    branch: main
+  access_key_id: $AWS_ACCESS_KEY_ID
+  secret_access_key:
+    secure: $AWS_SECRET_ACCESS_KEY
+    
 after_success:
   - docker build -t sakuffo/fib-client ./client
   - docker build -t sakuffo/fib-nginx ./nginx
@@ -21,3 +34,4 @@ after_success:
   - docker push sakuffo/fib-nginx
   - docker push sakuffo/fib-server
   - docker push sakuffo/fib-worker
+
