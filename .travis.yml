@@ -28,7 +28,7 @@ deploy:
   region: 'us-west-2'
   app: 'fib-app'
   env: 'Fibapp-env'
-  bucket_name: "elasticbeanstalk-us-west-2-981894193627"
+  bucket_name: 'elasticbeanstalk-us-west-2-981894193627'
   bucket_path: 'fib-app'
   on:
     branch: main
