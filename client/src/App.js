@@ -10,6 +10,7 @@ function App() {
     <Router>
       <div className="App">
         <header className="App-header">
+          <div> 
           <img src={logo} className="App-logo" alt="logo" />
           <a
             className="App-link"
@@ -21,6 +22,7 @@ function App() {
           </a>
           <Link to="/">Home</Link>
           <Link to="/otherpage">Other Page</Link>
+          </div>
         </header>
         <div>
           <Route exact path="/" component={Fib} />
