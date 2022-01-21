@@ -1,5 +1,6 @@
 language: generic
 sudo: required
+
 services: 
   - docker
 
@@ -27,8 +28,8 @@ deploy:
   region: 'us-west-2'
   app: 'fib-app'
   env: 'Fibapp-env'
-  bucket_name: elasticbeanstalk-us-east-1-981894193627
-  bucket_path: fib-app
+  bucket_name: "elasticbeanstalk-us-west-2-981894193627"
+  bucket_path: 'fib-app'
   on:
     branch: main
   access_key_id: $AWS_ACCESS_KEY
